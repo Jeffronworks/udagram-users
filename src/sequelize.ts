@@ -1,0 +1,24 @@
+import {Sequelize} from 'sequelize-typescript';
+import {config} from './config/config';
+
+
+export const sequelize = new Sequelize({
+  'username': config.username,
+  'password': config.password,
+  'database': config.database,
+  'host': config.host,
+
+  'dialect': config.dialect,
+  'storage': ':memory:',
+});
+
+// export const sequelize = new Sequelize({
+//   'username': 'jeffron',
+//   'password': 'root12',
+//   'database': 'postgres',
+//   'host': '192.168.95.41',
+
+//   'dialect': 'postgres',
+//   'storage': ':memory:',
+// });
+
